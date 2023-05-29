@@ -10,21 +10,21 @@
     <div class="question ml-sm-5 pl-sm-5 pt-2" v-for="(item,index) in qzarray" :key="item._id">
         
         <div class="py-2 h5"><b>{{index+1 + " "}}</b><b>{{ item.content }}</b></div>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options" >
             <label class="options">{{ item.option1 }}
-                <input type="radio" :name="radio + index" :value="item.option1">
+                <input type="radio"  :value="item.option1"  v-model="item.selectedAns">
                 <span class="checkmark"></span>
             </label>
             <label class="options">{{item.option2}}
-                <input type="radio" :name="radio + index" :value="item.option2">
+                <input type="radio"  :value="item.option2" v-model="item.selectedAns">
                 <span class="checkmark"></span>
             </label>
             <label class="options">{{item.option3}}
-                <input type="radio" :name="radio + index " :value="item.option3">
+                <input type="radio"  :value="item.option3" v-model="item.selectedAns">
                 <span class="checkmark"></span>
             </label>
             <label class="options">{{item.option4}}
-                <input type="radio" :name="radio + index" :value="item.option4">
+                <input type="radio"  :value="item.option4" v-model="item.selectedAns">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -58,12 +58,13 @@ export default {
                 console.log(title);
                 const token = await localStorage.getItem('token')
                 const questiondetails = await axios.get(import.meta.env.VITE_APIURL + '/get-questions', { headers: { Authorization: "bearer " + token }, params: { title } })
-                console.log(questiondetails);
+                console.log(questiondetails.data.data);
                 this.qzarray = questiondetails.data.data;
                 this.titleOne = title;
                 this.qzarray.forEach((q)=>{
                     q['selectedAns']=''
                 });
+                // console.log(questiondetails.data.data)
 
                 
                 // console.log(questiondetails.data.data[0].answer);
@@ -85,7 +86,7 @@ export default {
                 this.qzarray.forEach((it)=>{
                     // console.log(it.answer);
                     console.log(it.selectedAns);
-                    if(it.selectedAns == it.answer){
+                    if(it.selectedAns === it.answer){
                         count++;
                     }
 

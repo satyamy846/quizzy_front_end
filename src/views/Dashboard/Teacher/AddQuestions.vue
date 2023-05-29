@@ -39,13 +39,13 @@
                                 </div>
 
                                 <select v-model="values" class="form-select" aria-label="Default select example" >
-                                    <option v-for="title in fetchtitle">{{ title.title }}</option>
+                                    <option v-for="title in fetchtitle" :key="title._id">{{ title.title }}</option>
                                 </select>
 
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button" @click="addquestions">Add Question</button>
+                                        <button type="submit" id="form-submit" class="orange-button" >Add Question</button>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
@@ -96,11 +96,15 @@ export default {
         async addquestions() {
             try {
                 //fetch the token from the localStorage
-                if(this.content && this.option1 && this.option2 && this.option3 && this.option4 && this.answer){
+                if(!this.content && !this.option1 && !this.option2 && !this.option3 && !this.option4 && !this.answer){
+                    alert("All fields are required");
+                    return;
+                }
+                else if(this.content && this.option1 && this.option2 && this.option3 && this.option4 && this.answer){
                     const token = localStorage.getItem('token');
                 // console.log(token);
                 //start the loader
-                this.loading = true;
+                // this.loading = true;
                 const details = await axios.post(import.meta.env.VITE_APIURL + "/addquestions", {
                     content: this.content,
                     option1: this.option1,
@@ -111,11 +115,11 @@ export default {
                     title: this.values,
                     }, { headers: { Authorization: "bearer " + token } },);
                     //headers should be written after the data we want to send if we write first then this token will be send as a data
+                    alert("Questions added");
                     console.log(details);
                     // swal("Questions Added Successfully");
                 }
-                alert("Questions added");
-                this.loading = false;
+                // this.loading = false;
             }
             catch (err) {
                 console.log(err);
