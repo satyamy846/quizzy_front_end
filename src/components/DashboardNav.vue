@@ -72,7 +72,6 @@ Header Style
   display: flex;
   margin: 4px 2px;
   border-radius: 5%;
-  justify-items:auto
   /* text-emphasis-color: white; */
 
 }
