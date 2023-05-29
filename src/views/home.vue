@@ -7,7 +7,7 @@
   <testimonial/>
   <upcoming/>
   <contactUs/>
-  <footer/>
+  <Futer/>
 
 </template>
 
@@ -21,7 +21,7 @@ import team from './team.vue';
 import testimonial from './testimonial.vue';
 import upcoming from './upcoming.vue';
 import contactUs from './contactUs.vue';
-import footer from '../components/footer.vue';
+import Futer from '../components/Footer.vue';
 export default {
     name:'home',
 
@@ -34,7 +34,7 @@ export default {
       testimonial,
       upcoming,
       contactUs,
-      footer
+      Futer
     }
 }
 </script>

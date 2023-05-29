@@ -18,16 +18,11 @@
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
-                                    <fieldset>
+                                    <fieldset class="butt">
                                         <button type="submit" id="form-submit" class="orange-button" @click="updatequiz">Update</button>
-                                    </fieldset>
-
-                                    <div class="col-lg-12">
-                                        <fieldset>
-                                            <button type="submit" id="form-submit" class="orange-button"><router-link
+                                        <button type="submit" id="form-submit" class="orange-button"><router-link
                                                     to="/teacher/dashboard">Go Back</router-link></button>
-                                        </fieldset>
-                                    </div>
+                                    </fieldset>
                                 </div>
                             </div>
                         </form>
@@ -113,6 +108,7 @@ export default {
 <style>
 h2 {
     align-items: center;
+    color: #fff;
 }
 
 .contact-us {
@@ -204,4 +200,9 @@ h2 {
     font-size: 16px;
     font-weight: 400;
 }
+
+.butt{
+    justify-content: space-between;
+}
+
 </style>

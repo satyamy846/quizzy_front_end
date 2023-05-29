@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <footer/>
+    <Futer/>
 </template>
     
     
@@ -62,11 +62,11 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import navbar from '../../components/navbar.vue';
-import footer from '../../components/footer.vue';
+import Futer from '../../components/Footer.vue';
 export default {
   name: 'Teacherlogin',
   components:{
-    navbar,footer
+    navbar,Futer
   },
 
   data() {

@@ -8,13 +8,13 @@
             <h2>Quizzes</h2>
           </div>
           <fieldset>
-            <button type="submit" id="form-submit" class="orange-button"><router-link to="/student/dashboard">Go Back</router-link></button> 
+            <button  ><router-link class="mybutton" to="/student/dashboard">Go Back</router-link></button>
           </fieldset>
         </div>
       </div>
       
       <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" v-for="items in values">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" v-for="items in values" :key="items._id">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="../../../assests/images/course-01.jpg" alt=""></a>
@@ -31,7 +31,7 @@
       </div>
     </div>
   </section>
-<footer/>
+<Futer/>
 
 </template>
 
@@ -39,12 +39,12 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import DashboardNav from '../../../components/DashboardNav.vue';
-import footer from '../../../components/footer.vue';
+import Futer from '../../../components/Footer.vue';
 export default {
     name: 'quiz',
     components:{
     DashboardNav,
-    footer,
+    Futer,
     DashboardNav
 },
     data() {
@@ -108,6 +108,9 @@ export default {
 </script>
 
 <style>
+
+
+
 /* 
 ---------------------------------------------
 Courses Style
@@ -255,6 +258,22 @@ Courses Style
 .main-button button:hover {
   background-color: #7a6ad8;
   color: #fff;
+}
+
+.mybutton{
+  background-color: #7a6ad8;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 45%;
+  margin-bottom: 1rem;
+  /* text-emphasis-color: white; */
+
 }
 
 </style>

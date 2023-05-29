@@ -7,13 +7,13 @@
           <div class="section-heading">
             <h6>Contact Us</h6>
             <h2>Feel free to contact us anytime</h2>
-            <p>Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.</p>
-            <div class="special-offer">
+            <p>Have a question or need assistance? We're here to help! Our dedicated support team is ready to provide you with prompt and reliable assistance. Whether you need help with our courses, have inquiries about enrollment, or want to provide feedback, feel free to reach out to us. We value your input and strive to deliver an exceptional learning experience. Contact us today through the provided channels, and we'll get back to you as soon as possible. Let's embark on your learning journey together!</p>
+            <!-- <div class="special-offer">
               <span class="offer">off<br><em>50%</em></span>
               <h6>Valide: <em>24 April 2036</em></h6>
               <h4>Special Offer <em>50%</em> OFF!</h4>
               <a href="#"><i class="fa fa-angle-right"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-6">

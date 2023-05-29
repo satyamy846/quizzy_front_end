@@ -7,7 +7,7 @@
                     <div class="section-heading">
                         <h6>Latest Courses</h6>
                         <h2>All Quizzes</h2>
-                        <router-link :to="{path:'/teacher/dashboard'}">Go Back</router-link>
+                        <router-link class="mybutton" :to="{path:'/teacher/dashboard'}">Go Back</router-link>
                     </div>
                 </div>
             </div>
@@ -40,19 +40,19 @@
             </div>
         </div>
     </section>
-    <footer/>
+    <Futer/>
 </template>
    
 <script>
 import axios from 'axios';
 import swal from 'sweetalert';
 import DashboardNav from '../../../components/DashboardNav.vue';
-import footer from '../../../components/footer.vue';
+import Futer from '../../../components/Footer.vue';
 export default {
     name: 'quiz',
     components:{
         DashboardNav,
-        footer
+        Futer
     },
     data() {
         return {
@@ -120,7 +120,23 @@ export default {
    ---------------------------------------------
    Courses Style
    --------------------------------------------- 
-   */
+*/
+
+.mybutton{
+  background-color: #7a6ad8;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 45%;
+  margin-bottom: 1rem;
+  /* text-emphasis-color: white; */
+
+}
 
 .courses {
     margin-top: 160px;

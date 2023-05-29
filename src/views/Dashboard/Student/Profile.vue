@@ -6,7 +6,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-member">
                             <div class="main-content">
-                                <img src="../../../assests/images/admin.jpg" alt="">
+                                <img src="../../../assests/images/50426.jpg" alt="">
                                 <span class="category">satyam@gmail.com</span>
                                 <h4>Satyam Yadav</h4>
                                 <ul class="social-icons">
@@ -17,19 +17,19 @@
                             </div>
                         </div>
                     </div>  
-                    <router-link :to="{path:'/student/dashboard'}">Go Back</router-link>    
                 </div>
             </div>
+            <router-link class="mybutton" :to="{path:'/student/dashboard'}">Go Back</router-link>
         </div>
-        <footer/>
+        <Futer/>
 </template>
 
 <script>
 import DashboardNav from '../../../components/DashboardNav.vue';
-import footer from '../../../components/footer.vue';
+import Futer from '../../../components/Footer.vue';
 export default{
     name:"profile",
-    components:{DashboardNav,footer}
+    components:{DashboardNav,Futer}
 }
 
 </script>
@@ -39,10 +39,24 @@ export default{
 
 /* Team Styles */
 
+.mybutton{
+  background-color: #7a6ad8;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 45%;
+  /* text-emphasis-color: white; */
+
+}
+
 .team {
   margin-top: 100px;
     padding-top: 140px;
-    border: 2px solid red;
 }
 
 .team-member {

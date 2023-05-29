@@ -14,22 +14,22 @@
     <div class="carousel-item active">
       <img src="../assests/images/banner-item-01.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Learning opens endless possibilities.</h5>
+        <!-- <p>Some representative placeholder content for the first slide.</p> -->
       </div>
     </div>
     <div class="carousel-item">
       <img src="../assests/images/banner-item-02.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Knowledge empowers future generations.</h5>
+        <!-- <p>Some representative placeholder content for the second slide.</p> -->
       </div>
     </div>
     <div class="carousel-item">
       <img src="../assests/images/banner-item-03.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Lets grow with "Quizzy"</h5>
+        <!-- <p>Some representative placeholder content for the third slide.</p> -->
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@ Banner Style
   border-radius: 50px;
 }
 .carousel-inner{
-  border: 2px solid yellow;
+  border: 2px solid #ddd;
   border-radius: 50px;
 }
 
@@ -94,7 +94,7 @@ Banner Style
   background-repeat: no-repeat;
   background-size: cover;
   padding: 170px 0px 120px 0px;
-  border: 5px solid black;
+  border: 0px solid black;
 }
 
 /* .owl-carousel {
@@ -122,7 +122,7 @@ Banner Style
   background-position: center center;
   background-size: cover;
   border-radius: 25px;
-  border: 2px solid red;
+  border: 0px solid red;
   width: 70%;
   padding: 100px 100px;
   margin-left: 130px;
@@ -156,7 +156,7 @@ Banner Style
 .main-banner .item .buttons {
   display: flex;
   margin-top: 50px;
-  border: 2px solid red;
+  border: 0px solid red;
 }
 
 .main-banner .item .buttons .main-button {

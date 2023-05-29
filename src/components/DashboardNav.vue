@@ -1,78 +1,91 @@
 <template>
-    <!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky background-header">
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky background-header">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Quizzy</h1>
-                    </a>
-                    <!-- ***** Serach Start ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section">{{ email }}</li>
-                      <li class="scroll-to-section"><button @click="logout">Logout</button></li>
-                      
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h1>Quizzy</h1>
+            </a>
+            <!-- ***** Serach Start ***** -->
+            <!-- ***** Menu Start ***** -->
+
+            <ul class="">
+              <!-- <li  class="scroll-to-section">{{ email }}</li> -->
+              <button @click="logout" type="button" class="mybutton">Logout</button>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
         </div>
+      </div>
     </div>
 
-    
+
   </header>
   <!-- ***** Header Area End ***** -->
-
-
 </template>
 
 <script>
 import axios from 'axios';
 export default {
-    name: 'DashboardNav',
-    data() {
-        return {
-            values:[],
-        }
-    },
-    methods: {
-        async logout() {
-            try {
-                window.localStorage.clear();
-                this.$router.push({ name: 'home' })
-            }
-            catch (err) {
-
-            }
-        },
+  name: 'DashboardNav',
+  data() {
+    return {
+      values: [],
     }
+  },
+  methods: {
+    async logout() {
+      try {
+        window.localStorage.clear();
+        this.$router.push({ name: 'home' })
+      }
+      catch (err) {
+
+      }
+    },
+  }
 }
 </script>
 
 <style>
-
-
 /* 
 ---------------------------------------------
 Header Style
 --------------------------------------------- 
 */
 
+.mybutton{
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  display: flex;
+  margin: 4px 2px;
+  border-radius: 5%;
+  justify-items:auto
+  /* text-emphasis-color: white; */
+
+}
+
 .background-header {
   background-color: #7a6ad8 !important;
   border-radius: 0px 0px 25px 25px;
-  height: 80px!important;
-  position: fixed!important;
-  top: 0!important;
+  height: 80px !important;
+  position: fixed !important;
+  top: 0 !important;
   left: 0;
   right: 0;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
@@ -191,7 +204,9 @@ Header Style
   letter-spacing: .25px;
 }
 
-.background-header .main-nav .nav {margin-top: 20px;}
+.background-header .main-nav .nav {
+  margin-top: 20px;
+}
 
 .background-header .main-nav .nav li {
   height: 80px;
@@ -201,6 +216,7 @@ Header Style
 .header-area .main-nav .nav li:hover a {
   opacity: 0.8;
 }
+
 .header-area .main-nav .nav li a.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.10);
@@ -210,6 +226,7 @@ Header Style
 .background-header .main-nav .nav li:hover a {
   opacity: 0.8;
 }
+
 .background-header .main-nav .nav li a.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.10);
@@ -323,8 +340,8 @@ Header Style
   color: #fff;
 }
 
-.visible{
-  display:inline !important;
+.visible {
+  display: inline !important;
 }
 
 @media (max-width: 1200px) {
@@ -332,6 +349,7 @@ Header Style
     padding-left: 2px;
     padding-right: 2px;
   }
+
   .header-area .main-nav .nav li a {
     padding-left: 10px;
     padding-right: 10px;
@@ -340,10 +358,12 @@ Header Style
 }
 
 @media (max-width: 767px) {
+
   .background-header .main-nav .nav,
   .header-area .main-nav .nav {
     background-color: #f1f0fe;
   }
+
   .background-header .main-nav .nav li a,
   .header-area .main-nav .nav li a {
     line-height: 50px;
@@ -351,8 +371,9 @@ Header Style
     font-weight: 400;
     color: #1e1e1e;
     background-color: #f1f0fe;
-     border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px 25px 25px;
   }
+
   .background-header .main-nav .nav li,
   .header-area .main-nav .nav li {
     border-top: 1px solid #ddd;
@@ -360,38 +381,47 @@ Header Style
     height: 50px;
     border-radius: 0px 0px 25px 25px;
   }
+
   .background-header .main-nav .nav li:last-child,
   .header-area .main-nav .nav li:last-child {
     border-radius: 0px 0px 25px 25px;
   }
+
   .header-area .main-nav .nav {
     height: auto;
     flex-basis: 100%;
   }
+
   .header-area .main-nav .logo {
     position: absolute;
     left: 30px;
     top: 0px;
   }
+
   .background-header .main-nav .logo {
     top: 0px;
   }
+
   .background-header .main-nav .border-button {
     top: 0px !important;
   }
+
   .header-area .main-nav .border-button {
     position: absolute;
     top: 15px;
     right: 70px;
   }
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #7a6ad8!important;
+    color: #7a6ad8 !important;
     opacity: 1;
   }
+
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
+
   .header-area {
     background-color: transparent;
     padding: 0px 15px;
@@ -399,19 +429,24 @@ Header Style
     box-shadow: none;
     text-align: center;
   }
+
   .header-area .container {
     padding: 0px;
   }
+
   .header-area .logo {
     margin-left: 0px;
     margin-top: 30px;
   }
+
   .header-area .menu-trigger {
     display: block !important;
   }
+
   .header-area .main-nav {
     overflow: hidden;
   }
+
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
@@ -422,22 +457,24 @@ Header Style
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
+
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
   }
+
   .header-area.header-sticky .nav {
     margin-top: 100px !important;
   }
+
   .background-header.header-sticky .nav {
     margin-top: 80px !important;
   }
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  
-}
 
-</style>
+}</style>

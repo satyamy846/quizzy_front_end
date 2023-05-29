@@ -17,21 +17,21 @@
                                 </div>
                             </div>
                         </div> 
-                        <router-link :to="{path:'/teacher/dashboard'}">Go Back</router-link>   
                     </div>
+                    <router-link class="mybutton" :to="{path:'/teacher/dashboard'}">Go Back</router-link>   
                 </div>
             </div>
-            <footer/>
+            <Futer/>
     </template>
     
     <script>
     import DashboardNav from '../../../components/DashboardNav.vue';
-    import footer from '../../../components/footer.vue';
+    import Futer from '../../../components/Footer.vue';
     export default{
         name:"TeacherProfile",
         components:{
           DashboardNav,
-          footer
+          Futer
         }
     }
     
@@ -42,6 +42,21 @@
     
     /* Team Styles */
     
+    .mybutton{
+  background-color: #7a6ad8;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 45%;
+  /* text-emphasis-color: white; */
+
+}
+
     .team {
       margin-top: 100px;
         padding-top: 140px;

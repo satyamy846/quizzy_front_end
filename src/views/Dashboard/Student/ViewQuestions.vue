@@ -29,7 +29,7 @@
             </label>
         </div>
     </div>
-    <button  id="form-submit" class="orange-button" @click="submission">Submit</button>
+    <button  id="form-submit" class="mybutton" @click="submission">Submit</button>
     
 </div>
 </template>
@@ -127,6 +127,23 @@ export default {
 
 body{
     background-color: #ddd;
+}
+.mybutton{
+  background-color: white;
+  border: none;
+  color: #7a6ad8 ;
+  padding: 10px;
+  text-align: center;
+  
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  margin: 0px 2rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  height: 40px;
+  /* text-emphasis-color: white; */
+
 }
 .container{
     background-color: #7a6ad8;

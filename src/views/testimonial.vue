@@ -7,11 +7,11 @@
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <div class="item">
-              <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the website to download free templates. Thank you for visiting.”</p>
+              <p>“Please tell your friends or collegues about Quizzy website. Anyone can access the website to start his/her learning journey. Thank you for visiting.”</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
                 <span class="category">Full Stack Master</span>
-                <h4>Claude David</h4>
+                <h4>Shivam Yadav</h4>
               </div>
             </div>
     </div>
@@ -78,12 +78,12 @@ Testimonials Style
   margin-top: 150px;
 }
 .container-testimonial{
-  border: 2px solid green;
+  border: 0px solid green;
   display: flex;
   justify-content: center;
 }
 .userTestimonail{
-  border: 2px solid red;
+  border: 0px solid red;
   /* height: 300px; */
   width: 700px;
 }

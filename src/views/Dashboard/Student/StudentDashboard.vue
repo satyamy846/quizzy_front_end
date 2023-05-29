@@ -42,11 +42,11 @@
 import { RouterView } from 'vue-router';
 import DashboardNav from '../../../components/DashboardNav.vue';
 import profile from './Profile.vue';
-
+import footer from '../../../components/footer.vue';
 
 export default {
     name: "Dashboard",
-    components: { DashboardNav ,profile}
+    components: { DashboardNav ,profile,footer}
 }
 </script>
 

@@ -46,11 +46,11 @@
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <button type="submit" id="form-submit" class="orange-button" >Add Question</button>
+                                        <button type="submit" id="form-submit" class="orange-button"><router-link to="/teacher/dashboard">Go Back</router-link></button> 
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                     <button type="submit" id="form-submit" class="orange-button"><router-link to="/teacher/dashboard">Go Back</router-link></button> 
                                     </fieldset>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <footer/>
+    <Futer/>
 </template>
 
 
@@ -68,13 +68,13 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import DashboardNav from '../../../components/DashboardNav.vue';
-import footer from '../../../components/footer.vue';
+import Futer from '../../../components/Footer.vue';
 export default {
 
     name: 'addquestions',
     components:{
         DashboardNav,
-        footer
+        Futer
     },
     data() {
         return {

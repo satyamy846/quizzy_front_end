@@ -28,7 +28,8 @@
                 <span class="checkmark"></span>
             </label>
         </div>
-        <button  id="form-submit" class="orange-button" @click="updatequestion(item._id,item.title)">Update</button>
+        <button  id="form-submit" class="mybutton" @click="updatequestion(item._id,item.title)">Update</button>
+        <hr>
     </div>
     
 </div>
@@ -101,6 +102,8 @@ export default {
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -110,6 +113,23 @@ export default {
 body{
     background-color: #ddd;
 }
+
+.mybutton{
+  background-color: white;
+  border: none;
+  color: #7a6ad8;
+  /* padding: 20px; */
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  margin: px 20px;
+  border-radius: 10%;
+  margin-bottom: .3rem;
+  /* text-emphasis-color: white; */
+
+}
+
 .container{
     background-color: #7a6ad8;
     color: white;
