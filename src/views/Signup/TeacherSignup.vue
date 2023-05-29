@@ -52,7 +52,7 @@
                                 
                                 <div class="col-lg-12">
                                     <div class="tacbox">
-                                    <input  v-model = "first_name" id="checkbox" type="checkbox" />
+                                    <input  v-model = "Isteacher" id="checkbox" type="checkbox" />
                                     <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
                                 </div>
                                     <fieldset>
@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    <footer/>
+    <Futer/>
 </template>
     
     
@@ -86,11 +86,11 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import navbar from '../../components/navbar.vue';
-import footer from '../../components/footer.vue';
+import Futer from '../../components/Footer.vue';
 export default {
     name: 'TeacherSignup',
     components:{
-    navbar,footer
+    navbar,Futer
   },
 
     data(){
@@ -170,6 +170,10 @@ export default {
 
 /*Designing Singup Button START*/ 
 
+#contact{
+    margin-top: 3rem;
+}
+
 .studentsignup{
         display: flex;
         justify-content: center;
@@ -201,7 +205,7 @@ export default {
 }
 .col-registered2{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-bottom: 0.5rem;
 }
 

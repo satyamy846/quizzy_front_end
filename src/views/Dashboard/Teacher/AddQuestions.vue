@@ -44,7 +44,7 @@
 
 
                                 <div class="col-lg-12">
-                                    <fieldset>
+                                    <fieldset class="main-btn">
                                         <button type="submit" id="form-submit" class="orange-button" >Add Question</button>
                                         <button type="submit" id="form-submit" class="orange-button"><router-link to="/teacher/dashboard">Go Back</router-link></button> 
                                     </fieldset>
@@ -232,5 +232,10 @@ export default {
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+}
+
+.main-btn{
+    display: flex;
+    justify-content: space-between;
 }
 </style>

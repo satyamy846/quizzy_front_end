@@ -1,45 +1,46 @@
 <template>
-<DashboardNav/>
-<div class="team section" id="team">
-            <div class="container profile">
-                <div class="row"> 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-member">
-                            <div class="main-content">
-                                <img src="../../../assests/images/50426.jpg" alt="">
-                                <span class="category">satyam@gmail.com</span>
-                                <h4>Satyam Yadav</h4>
-                                <ul class="social-icons">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
+  <DashboardNav />
+  <div class="team section" id="team">
+    <div class="container profile">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="../../../assests/images/student.jpg" alt="">
+              <span class="category">satyam@gmail.com</span>
+              <h4>Satyam Yadav</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
             </div>
-            <router-link class="mybutton" :to="{path:'/student/dashboard'}">Go Back</router-link>
+          </div>
         </div>
-        <Futer/>
+      </div>
+    </div>
+    <div class="goback-btn">
+      <router-link class="mybutton" :to="{ path: '/student/dashboard' }">Go Back</router-link>
+    </div>
+  </div>
+  <Futer />
 </template>
 
 <script>
 import DashboardNav from '../../../components/DashboardNav.vue';
 import Futer from '../../../components/Footer.vue';
-export default{
-    name:"profile",
-    components:{DashboardNav,Futer}
+export default {
+  name: "profile",
+  components: { DashboardNav, Futer }
 }
 
 </script>
 
 
 <style>
-
 /* Team Styles */
 
-.mybutton{
+.mybutton {
   background-color: #7a6ad8;
   border: none;
   color: white;
@@ -56,7 +57,7 @@ export default{
 
 .team {
   margin-top: 100px;
-    padding-top: 140px;
+  padding-top: 140px;
 }
 
 .team-member {
@@ -120,5 +121,8 @@ export default{
   color: #fff;
 }
 
-
+.goback-btn{
+  display: flex;
+  justify-content: center;
+}
 </style>

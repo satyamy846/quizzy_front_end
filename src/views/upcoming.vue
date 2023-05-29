@@ -4,7 +4,6 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="section-heading">
-            <h6>Schedule</h6>
             <h2>Upcoming Features</h2>
           </div>
         </div>
@@ -27,12 +26,12 @@
                     <h6>Comming Soon</h6>
                   </li>
                   <li>
-                    <span>Duration:</span>
-                    <h6>22 Hours</h6>
+                    <span>Users:</span>
+                    <h6>Basic</h6>
                   </li>
                   <li>
                     <span>Price:</span>
-                    <h6>$120</h6>
+                    <h6>$100</h6>
                   </li>
                 </ul>
                 <a href="#"><i class="fa fa-angle-right"></i></a>
@@ -45,7 +44,7 @@
             <div class="row">
               <div class="col-lg-3">
                 <div class="image">
-                  <img src="../assests/images/screen.jpg" alt="">
+                  <img src="../assests/images/recording1.jpg" alt="recording.jpg">
                 </div>
               </div>
               <div class="col-lg-9">
@@ -59,12 +58,12 @@
                     <h6>Comming Soon</h6>
                   </li>
                   <li>
-                    <span>Duration:</span>
-                    <h6>30 Hours</h6>
+                    <span>Users:</span>
+                    <h6>Lite</h6>
                   </li>
                   <li>
                     <span>Price:</span>
-                    <h6>$320</h6>
+                    <h6>$200</h6>
                   </li>
                 </ul>
                 <a href="#"><i class="fa fa-angle-right"></i></a>
@@ -77,7 +76,7 @@
             <div class="row">
               <div class="col-lg-3">
                 <div class="image">
-                  <img src="../assests/images/analysis.jpg" alt="">
+                  <img src="../assests/images/analysis.jpg" alt="analysis.jpg">
                 </div>
               </div>
               <div class="col-lg-9">
@@ -91,8 +90,8 @@
                     <h6>Comming Soon</h6>
                   </li>
                   <li>
-                    <span>Duration:</span>
-                    <h6>48 Hours</h6>
+                    <span>Users:</span>
+                    <h6>Premium</h6>
                   </li>
                   <li>
                     <span>Price:</span>
@@ -208,6 +207,10 @@ Events Style
   z-index: 1;
   color: #fff;
   border-radius: 60px 0px 0px 60px;
+}
+
+.section-heading h2{
+  color: black;
 }
 
 </style>

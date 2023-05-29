@@ -1,5 +1,5 @@
 <template>
-    <navbar/>
+    <navbar />
     <div class="contact-us section" id="contact">
         <div class="container">
             <div class="row">
@@ -13,35 +13,37 @@
                                         <h3>Student Login</h3>
                                     </div>
                                 </fieldset>
-                                
+
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input v-model = "email" type="email" name="email" id="email"
-                                            placeholder="Email" required>
+                                        <input v-model="email" type="email" name="email" id="email" placeholder="Email"
+                                            required>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input v-model = "password" type="password" name="password" id="password"
+                                        <input v-model="password" type="password" name="password" id="password"
                                             placeholder="Password" required>
                                     </fieldset>
                                 </div>
-                               
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <div class="col-registered2">
-                                                <span>Not Registered yet?</span>
+                                            <span>Not Registered yet?</span>
 
                                         </div>
-                                        
+
                                         <div class="row1-register">
                                             <div class="SignIn">
-                                            <button  id="form-submit" class="orange-button" @click="login">Sign
+                                                <button id="form-submit" class="orange-button" @click="login">Sign
                                                     In</button>
-                                        </div>
+                                            </div>
                                             <div class="col-registered1">
-                                                <button type="submit" id="form-submit2" class="orange-button"><router-link class="ml-1" style="text-decoration: none;" :to="{ path: '/teacher/signup' }">
-                                Sign Up</router-link></button>
+                                                <button type="submit" id="form-submit2" class="orange-button"><router-link
+                                                        class="ml-1" style="text-decoration: none;"
+                                                        :to="{ path: '/student/signup' }">
+                                                        Sign Up</router-link></button>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -54,7 +56,7 @@
             </div>
         </div>
     </div>
-    <Futer/>
+    <Futer />
 </template>
     
     
@@ -65,9 +67,9 @@ import navbar from '../../components/navbar.vue';
 import Futer from '../../components/Footer.vue';
 export default {
     name: 'StudentLogin',
-    components:{
-    navbar,Futer
-  },
+    components: {
+        navbar, Futer
+    },
 
     data() {
         return {
@@ -103,6 +105,16 @@ export default {
                         // this.loading = false;
 
                         swal("You are logged in", "success");
+
+                        localStorage.setItem('token', result.data.token);
+                        localStorage.setItem('userfirstname', result.data.user.firstname);
+                        localStorage.setItem('userlastname', result.data.user.lastname);
+                        localStorage.setItem('useremail', result.data.user.email);
+                        localStorage.setItem('usercontact', result.data.user.contact);
+                        localStorage.setItem('Isstudent', result.data.user.Isstudent);
+                        const key = await localStorage.getItem('Isstudent')
+                        console.log(result.data.user.Isstudent);
+
                         // alert("Success")
                         console.log(result);
 
@@ -129,9 +141,10 @@ export default {
     --------------------------------------------- 
     */
 
-#contact{
-    margin-top:5rem ;
-}    
+#contact {
+    margin-top: 5rem;
+}
+
 .teacherlogin {
     display: flex;
     justify-content: center;

@@ -35,7 +35,7 @@
           <div class="team-member">
             <div class="main-content">
               <img src="../assests/images/member3.png" alt="">
-              <span class="category">Full Stack Master</span>
+              <span class="category">Full Stack Developer</span>
               <h4>Amber Sinha</h4>
               <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>

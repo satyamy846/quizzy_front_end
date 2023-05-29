@@ -12,7 +12,7 @@
               <h4>Online Degrees</h4>
               <p>Coming Soon.</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="">Read More</a>
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@
               <h4>Short Courses</h4>
               <p>Coming Soon</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="">Read More</a>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
               <h4>Web Experts</h4>
               <p>Coming Soon</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="">Read More</a>
               </div>
             </div>
           </div>

@@ -59,22 +59,20 @@
                                   <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
                               </div>
                                   <fieldset>
-                                      <div class="col-registered2">
-                                              <span>Already Registered?</span>
+                                        <div class="col-registered2">
+                                                <span>Already Registered?</span>
 
-                                          </div>
-                                      <div class="row1-register">
-                                          <div class="col-registered1">
-                                              <button type="submit" id="form-submit" class="orange-button" >Sign
-                                                  In</button>
-                                          </div>
-                                          <div class="SignIn">
-                                          <button type="submit" id="form-submit" class="orange-button" @click="signup">Sign
-                                                  Up</button>
-                                          </div>
-                                      </div>
-                                      
-                                  </fieldset>
+                                            </div>
+                                        <div class="row1-register">
+                                            <div class="col-registered1">
+                                                <button type="submit" id="form-submit2" class="orange-button"><router-link :to="{path:'/student/login'}">Sign in</router-link></button>
+                                            </div>
+                                            <div class="SignIn">
+                                            <button type="submit" id="form-submit" class="orange-button" @click="signup">Sign
+                                                    Up</button>
+                                            </div>
+                                        </div>   
+                                    </fieldset>
 
                               </div>
                           </div>
@@ -84,7 +82,7 @@
           </div>
       </div>
   </div>
-  <footer/>
+  <Futer/>
 </template>
   
   
@@ -92,11 +90,11 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import navbar from '../../components/navbar.vue';
-import footer from '../../components/footer.vue';
+import Futer from '../../components/Footer.vue';
 export default {
   name: 'TeacherSignup',
   components:{
-   navbar,footer
+   navbar,Futer
   },
 
   data(){
@@ -149,7 +147,7 @@ export default {
                   email: this.email,
                   password: this.password,
                   contact: this.contact,
-                  Isteacher: this.Isteacher
+                  Isstudent:this.Isstudent
                   });
                   swal("Successfully Registered", "success");
                   console.log(result.data);
@@ -165,7 +163,14 @@ export default {
               console.log(err)
           }
       },
-  }
+      // async getemail(){
+      //   console.log(this.Isstudent);
+      // }
+  },
+
+  // mounted(){
+  //   this.getemail();
+  // }
 }
 </script>
   

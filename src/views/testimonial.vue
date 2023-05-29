@@ -10,28 +10,28 @@
               <p>“Please tell your friends or collegues about Quizzy website. Anyone can access the website to start his/her learning journey. Thank you for visiting.”</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
-                <span class="category">Full Stack Master</span>
+                <span class="category">Full Stack Developer</span>
                 <h4>Shivam Yadav</h4>
               </div>
             </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <div class="item">
-              <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the website to download free templates. Thank you for visiting.”</p>
+              <p>“Please tell your friends or collegues about Quizzy website. Anyone can access the website to start his/her learning journey. Thank you for visiting.”</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
-                <span class="category">Full Stack Master</span>
-                <h4>Claude David</h4>
+                <span class="category">Full Stack Developer</span>
+                <h4>Satyam Kumar</h4>
               </div>
             </div>
     </div>
     <div class="carousel-item">
       <div class="item">
-              <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the website to download free templates. Thank you for visiting.”</p>
+              <p>“Please tell your friends or collegues about Quizzy website. Anyone can access the website to start his/her learning journey. Thank you for visiting.”</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
-                <span class="category">Full Stack Master</span>
-                <h4>Claude David</h4>
+                <span class="category">Full Stack Developer</span>
+                <h4>Amber Sinha</h4>
               </div>
             </div>
     </div>
@@ -50,7 +50,7 @@
       <div class="section-heading">
         <h6>TESTIMONIALS</h6>
         <h2>What they say about us?</h2>
-        <p>You can search free CSS templates on Google using different keywords such as templatemo portfolio, templatemo gallery, templatemo blue color, etc.</p>
+        <p>The online quiz portal is an exceptional platform that offers engaging quizzes across various subjects. The user interface is intuitive and visually appealing, enhancing the overall experience. The questions are thoughtfully crafted, providing a challenging yet enjoyable experience. Highly recommended for all quiz enthusiasts!</p>
       </div>
     </div>
 

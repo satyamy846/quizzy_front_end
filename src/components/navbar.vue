@@ -6,7 +6,7 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <h1>Quizzy</h1>
                     </a>
                     <!-- ***** Logo End ***** -->

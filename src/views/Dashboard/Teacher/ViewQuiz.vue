@@ -5,14 +5,14 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>Latest Courses</h6>
+                        <!-- <h6>Latest Courses</h6> -->
                         <h2>All Quizzes</h2>
                         <router-link class="mybutton" :to="{path:'/teacher/dashboard'}">Go Back</router-link>
                     </div>
                 </div>
             </div>
             <div class="row event_box" >
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" v-for="item in values">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" v-for="item in values" :key="item._id">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="../../../assests/images/course-01.jpg" alt=""></a>
@@ -23,14 +23,14 @@
                             </span>
                         </div>
                         <div class="down-content">
-                            <div class="main-button">
+                            <div class="main-button btn-update">
                                 <button type="button" @click="updatequiz(item._id)">Update</button>
                             </div>
-                            <div class="main-button">
+                            <div class="main-button btn-delete">
                                 <button type="button" @click="deletequiz(item._id,item.title)">Delete</button>
                             </div>
-                            <div class="main-button">
-                                <button type="button" @click="viewquestions(item.title)">View Question</button>
+                            <div class="main-button btn-view">
+                                <button type="button" @click="viewquestions(item.title)">View</button>
                             </div>
                         </div>
                     </div>
@@ -137,6 +137,7 @@ export default {
   /* text-emphasis-color: white; */
 
 }
+
 
 .courses {
     margin-top: 160px;
@@ -274,7 +275,37 @@ export default {
     transition: all .3s;
 }
 
-.main-button button:hover {
+/* .main-button button:hover {
     background-color: #7a6ad8;
     color: #fff;
-}</style>
+} */
+
+.down-content{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.btn-update button{
+    background-color: white;
+}
+.btn-update button:hover{
+    background-color: rgb(100, 100, 100);
+    color:white;
+}
+
+.btn-delete button{
+    background-color: white;
+}
+.btn-delete button:hover{
+    background-color: rgb(158, 25, 25);
+    color:white;
+}
+
+
+.btn-view button:hover{
+    background-color: #7a6ad8;
+    color:white;
+}
+</style>

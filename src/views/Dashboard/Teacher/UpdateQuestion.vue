@@ -1,4 +1,5 @@
 <template>
+    <DashboardNav/>
     <router-link to="/teacher/dashboard/view-quiz"></router-link>
      <div class="contact-us section" id="contact">
         <div class="container">
@@ -45,7 +46,7 @@
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button" @click="updatequestion(title)">Update Question</button>
+                                        <button type="submit" id="form-submit" class="orange-button">Update Question</button>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
@@ -58,14 +59,17 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    
+    <Futer/>
 </template>
 
 <script>
 import axios from 'axios';
 import swal from 'sweetalert';
+import Futer from '../../../components/Footer.vue';
+import DashboardNav from '../../../components/DashboardNav.vue';
 
 
 export default {
@@ -82,7 +86,9 @@ export default {
             answer:'',
         }
     },
-
+    components:{
+        DashboardNav,Futer
+    },
     methods: {
         async getquestions() {
             try {
@@ -241,5 +247,11 @@ body{
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+}
+
+
+.row{
+    display: flex;
+    justify-content: center;
 }
 </style>

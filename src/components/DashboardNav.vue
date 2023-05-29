@@ -6,15 +6,24 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
               <h1>Quizzy</h1>
             </a>
             <!-- ***** Serach Start ***** -->
             <!-- ***** Menu Start ***** -->
 
-            <ul class="">
-              <!-- <li  class="scroll-to-section">{{ email }}</li> -->
-              <button @click="logout" type="button" class="mybutton">Logout</button>
+            <ul class="nav">
+              <li  class="scroll-to-section email-list" >
+                <button class="btn" v-if="Isstudent">{{ studentemail }}</button>
+                <!-- <li class="scroll-to-section"><a @click="logout">Logout</a></li> -->
+                <button class="btn" v-else >{{ teacheremail }}</button>
+                
+             
+              </li>
+              <li class="scroll-to-section email-list">
+
+                <button @click="logout" type="button"  class="btn" >Logout</button>
+              </li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -36,7 +45,10 @@ export default {
   name: 'DashboardNav',
   data() {
     return {
-      values: [],
+      teacheremail:'',
+      studentemail:'',
+      Isteacher:'',
+      Isstudent:'',
     }
   },
   methods: {
@@ -49,6 +61,21 @@ export default {
 
       }
     },
+    async getEmail(){
+      try{
+            this.teacheremail = localStorage.getItem('teacheremail');
+            this.studentemail = localStorage.getItem('useremail');
+            this.Isteacher = localStorage.getItem('Isteacher');
+            this.Isstudent = localStorage.getItem('Isstudent');
+            // console.log(this.studentemail);
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+  },
+  mounted(){
+    this.getEmail();
   }
 }
 </script>
@@ -182,6 +209,25 @@ Header Style
   padding-right: 5px;
   height: 40px;
   line-height: 40px;
+}
+/* Custom button */
+.header-area .main-nav .nav li .btn{
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #fff;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  border: transparent;
+  letter-spacing: .25px;
 }
 
 .header-area .main-nav .nav li a {
@@ -476,4 +522,7 @@ Header Style
     padding-right: 0px !important;
   }
 
-}</style>
+}
+
+
+</style>

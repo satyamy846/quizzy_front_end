@@ -1,5 +1,5 @@
 <template>
-    <navbar/>
+    <navbar />
     <div class="contact-us section" id="contact">
         <div class="container">
             <div class="row">
@@ -13,35 +13,37 @@
                                         <h3>Teacher Login</h3>
                                     </div>
                                 </fieldset>
-                                
+
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input v-model = "email" type="email" name="email" id="email"
-                                            placeholder="Email" required>
+                                        <input v-model="email" type="email" name="email" id="email" placeholder="Email"
+                                            required>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input v-model = "password" type="password" name="password" id="password"
+                                        <input v-model="password" type="password" name="password" id="password"
                                             placeholder="Password" required>
                                     </fieldset>
                                 </div>
-                               
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <div class="col-registered2">
-                                                <span>Not Registered yet?</span>
+                                            <span>Not Registered yet?</span>
 
                                         </div>
-                                        
+
                                         <div class="row1-register">
                                             <div class="SignIn">
-                                            <button  id="form-submit" class="orange-button" @click="login">Sign
+                                                <button id="form-submit" class="orange-button" @click="login">Sign
                                                     In</button>
-                                        </div>
+                                            </div>
                                             <div class="col-registered1">
-                                                <button type="submit" id="form-submit2" class="orange-button"><router-link class="ml-1" style="text-decoration: none;" :to="{ path: '/teacher/signup' }">
-                                Sign Up</router-link></button>
+                                                <button type="submit" id="form-submit2" class="orange-button"><router-link
+                                                        class="ml-1" style="text-decoration: none;"
+                                                        :to="{ path: '/teacher/signup' }">
+                                                        Sign Up</router-link></button>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -54,7 +56,7 @@
             </div>
         </div>
     </div>
-    <Futer/>
+    <Futer />
 </template>
     
     
@@ -64,146 +66,153 @@ import swal from 'sweetalert';
 import navbar from '../../components/navbar.vue';
 import Futer from '../../components/Footer.vue';
 export default {
-  name: 'Teacherlogin',
-  components:{
-    navbar,Futer
-  },
-
-  data() {
-    return {
-      email: "",
-      password: "",
-      result:'',
-      loading:false,
-      rules:{
-        email:{
-            required: value => !!value || 'Email is Required.',
-            counter: value => value.length <= 20 || 'Max 20 characters',
-        },
-        password:{
-            required: value =>!!value || 'Password is Required.',
-            minimum: value => value.length >=4 && value.length <=16 || ' Password should contains min 4 or max 16',
-        }
-      }
-    };
-  },
-  methods: {
-    async login() {
-      // console.log(this.email, this.password);
-      try {
-        
-        
-        if (this.email && this.password) {
-          if (this.password.length >= 4 && this.password.length <= 12) {
-            const user = {
-              email: this.email,
-              password: this.password,
-            };
-            // if(user.email == existinguser.email){
-            //   alert("User not found")
-            // }
-            //start the loader
-            this.loading = true;
-            const result = await axios.post(
-              import.meta.env.VITE_APIURL + "/teacher/login",
-              user
-            );
-            // this.loading = false;
-            
-            swal("You are logged in", "success");
-            console.log(result);
-            
-            // console.log(result.data.user.contact);
-            
-            localStorage.setItem('token', result.data.token);
-            // localStorage.setItem('userfirstname', result.data.user.firstname);
-            // localStorage.setItem('userlastname', result.data.user.lastname);
-            // localStorage.setItem('useremail', result.data.user.email);
-            // localStorage.setItem('usercontact', result.data.user.contact);
-            // localStorage.setItem('Isstudent',result.data.user.Isstudent);
-            // const  key = await localStorage.getItem('Isstudent')
-            // console.log("login ",key);
-            
-            this.$router.push({ name: "teacherdashboard" });
-          }
-         
-        }
-        this.loading = false;
-        // else {
-        //     console.log("Pasword or email is incorrect");
-        //   }
-      }
-      catch (err) {
-        // alert("User not found");
-        console.log(err);
-        this.loading = false;
-      }
+    name: 'Teacherlogin',
+    components: {
+        navbar, Futer
     },
-    
-  },
-//   mounted(){
-//     this.getuser();
-//     this.login();
-//   }
-  
+
+    data() {
+        return {
+            email: "",
+            password: "",
+            result: '',
+            loading: false,
+            rules: {
+                email: {
+                    required: value => !!value || 'Email is Required.',
+                    counter: value => value.length <= 20 || 'Max 20 characters',
+                },
+                password: {
+                    required: value => !!value || 'Password is Required.',
+                    minimum: value => value.length >= 4 && value.length <= 16 || ' Password should contains min 4 or max 16',
+                }
+            }
+        };
+    },
+    methods: {
+        async login() {
+            // console.log(this.email, this.password);
+            try {
+
+
+                if (this.email && this.password) {
+                    if (this.password.length >= 4 && this.password.length <= 12) {
+                        const user = {
+                            email: this.email,
+                            password: this.password,
+                        };
+                        // if(user.email == existinguser.email){
+                        //   alert("User not found")
+                        // }
+                        //start the loader
+                        this.loading = true;
+                        const result = await axios.post(
+                            import.meta.env.VITE_APIURL + "/teacher/login",
+                            user
+                        );
+                        // this.loading = false;
+
+                        swal("You are logged in", "success");
+                        console.log(result.data.teacher);
+
+                        // console.log(result.data.user.contact);
+
+                        localStorage.setItem('token', result.data.token);
+                        localStorage.setItem('teacherfirstname', result.data.teacher[0].firstname);
+                        localStorage.setItem('teacherlastname', result.data.teacher[0].lastname);
+                        localStorage.setItem('teacheremail', result.data.teacher[0].email);
+                        localStorage.setItem('teachercontact', result.data.teacher[0].contact);
+                        localStorage.setItem('Isteacher', result.data.teacher[0].Isteacher);
+
+
+                        this.$router.push({ name: "teacherdashboard" });
+                    }
+
+                }
+                this.loading = false;
+                // else {
+                //     console.log("Pasword or email is incorrect");
+                //   }
+            }
+            catch (err) {
+                // alert("User not found");
+                console.log(err);
+                this.loading = false;
+            }
+        },
+
+    },
+    //   mounted(){
+    //     this.getuser();
+    //     this.login();
+    //   }
+
 }
 </script>
     
     
 <style>
-#contact{
-    margin-top:5rem ;
-}   
+#contact {
+    margin-top: 5rem;
+}
+
 /* 
     ---------------------------------------------
     Contact Style
     --------------------------------------------- 
     */
-    .teacherlogin{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
-    }
-.teacherlogin h3{
-    color: #fff;
-    
+.teacherlogin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
-.row1-register{
+
+.teacherlogin h3 {
+    color: #fff;
+
+}
+
+.row1-register {
     display: flex;
     justify-content: space-between;
 }
+
 .container .row {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.SignIn{
-    display:flex;
-    
+
+.SignIn {
+    display: flex;
+
 }
-#sign-in{
+
+#sign-in {
     cursor: pointer;
 
     color: rgb(238, 213, 213);
 }
 
-.col-registered2{
+.col-registered2 {
     display: flex;
     justify-content: flex-end;
 
     margin-bottom: 0.5rem;
 }
-.col-registered2 span{
+
+.col-registered2 span {
     padding-top: 50px;
     color: White;
-    
+
 }
 
-.row1-register{
+.row1-register {
     display: flex;
     justify-content: space-between;
 }
+
 /* /Designing Singup Button END/  */
 
 
@@ -422,5 +431,4 @@ export default {
     color: #fff;
     font-size: 16px;
     font-weight: 400;
-}
-</style>
+}</style>

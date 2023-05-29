@@ -1,11 +1,12 @@
 <template>
+    <DashboardNav/>
     <div class="contact-us section" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post" @submit.prevent="addquiz">
-                            <div class="row">
+                            <div class="inner-row">
                                 <h2>Add Quiz</h2>
                                 <div class="col-lg-12">
                                     <fieldset>
@@ -21,7 +22,7 @@
                                     <fieldset class="butt">
                                         <button type="submit" id="form-submit" class="orange-button" @click="updatequiz">Update</button>
                                         <button type="submit" id="form-submit" class="orange-button"><router-link
-                                                    to="/teacher/dashboard">Go Back</router-link></button>
+                                                    to="/teacher/view-quiz">Go Back</router-link></button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -31,11 +32,14 @@
             </div>
         </div>
     </div>
+    <Futer/>
 </template>
 
 <script>
 import axios from 'axios';
 import swal from 'sweetalert';
+import Futer from '../../../components/Footer.vue';
+import DashboardNav from '../../../components/DashboardNav.vue';
 
 export default {
     name: 'updatequiz',
@@ -47,6 +51,7 @@ export default {
             loading: false
         }
     },
+    components:{DashboardNav,Futer},
     methods: {
         async getquiz() {
             try {
@@ -81,7 +86,7 @@ export default {
                 }, { headers: { Authorization: "bearer " + token } });
                 console.log(details);
                 alert("Quiz is updated");
-                this.$router.push({name:'quiz'});
+                this.$router.push({name:'viewquiz'});
 
             }
             catch (err) {
@@ -202,7 +207,18 @@ h2 {
 }
 
 .butt{
+    display: flex;
     justify-content: space-between;
 }
 
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.inner-row h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
 </style>

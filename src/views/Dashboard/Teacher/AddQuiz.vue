@@ -2,7 +2,7 @@
     <DashboardNav/>
     <div class="contact-us section" id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row-container">
                 <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post" @submit.prevent="addquiz">
@@ -19,10 +19,9 @@
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
-                                    <fieldset>
+                                    <fieldset class="main-button">
                                         <button type="submit" id="form-submit" class="orange-button" @click="addquiz">Add Quiz</button>
-                                        <button type="submit" id="form-submit" class="orange-button"><router-link
-                                                    to="/teacher/dashboard">Go Back</router-link></button>
+                                        <button type="submit" id="form-submit" class="orange-button" ><router-link to="/teacher/dashboard">Go Back</router-link></button> 
                                     </fieldset>
 
                                 </div>
@@ -163,7 +162,7 @@ h2 {
 }
 
 #contact-form button:hover {
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 .contact-us-content .more-info {
@@ -189,5 +188,20 @@ h2 {
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+}
+
+.row h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.main-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-container{
+    display: flex;
+    justify-content: center;
 }
 </style>
