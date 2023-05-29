@@ -77,6 +77,7 @@ export default {
   left: 50%;
   transform: translateX(-110px);
   transition: all .3s;
+  border: 2px solid rgb(36, 36, 78);
 }
 
 .team-member .main-content {
@@ -124,5 +125,14 @@ export default {
 .goback-btn{
   display: flex;
   justify-content: center;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  border: 2px solid rgb(36, 36, 78);
 }
 </style>

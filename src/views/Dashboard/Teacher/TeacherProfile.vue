@@ -94,11 +94,6 @@ export default {
   /* border: 2px solid red; */
 }
 
-.team-member {
-  /* position: relative; */
-
-}
-
 .row {
   /* border: 2px solid green; */
   display: flex;
